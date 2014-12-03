@@ -16,7 +16,6 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 #require 'active_support'
-require 'rails'
 require 'niboshi_json_formatter'
 
 RSpec.configure do |config|
