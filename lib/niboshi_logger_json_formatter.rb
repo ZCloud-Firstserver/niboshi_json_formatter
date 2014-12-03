@@ -1,14 +1,14 @@
-require "niboshi_logger_json_formatter/version"
+require 'niboshi_json_formatter/version'
+require 'rails'
 
 module Niboshi
-  module Logger
-    class JsonFormatter < Logger::Formatter
+    class JsonFormatter < ::Logger::Formatter
       def hostname
         @hostname ||= Socket.gethostname
       end
 
       def tid
-        Thread.current.object_id
+        "TID-#{Thread.current.object_id.to_s(36)}"
       end
 
       def call(severity, time, program, msg)
@@ -23,5 +23,4 @@ module Niboshi
         }.to_json + "\n"
       end
     end
-  end
 end
