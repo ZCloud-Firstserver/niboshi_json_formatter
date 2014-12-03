@@ -1,4 +1,5 @@
 require "logger"
+require "json"
 
 module Niboshi
   class JsonFormatter < ::Logger::Formatter
