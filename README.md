@@ -18,21 +18,22 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install niboshi_json_formatter
+    $ gem specific_install -l git://github.com/ZCloud-Firstserver/niboshi_json_formatter.git
 
 ## Usage
 
-### For Rails project
+### Rails project
 
-Add this to your `config/environments/*.rb` files:
+Add this to your `config/environments/*.rb`:
 
 ```
 config.log_formatter = Niboshi::JsonFormatter.new
 ```
-### For Logger
+### Logger
+
+Update the formatter:
 
 ```
-require 'json'
 require 'niboshi_json_formatter'
 @log = Logger.new(STDOUT)
 @log.formatter = Niboshi::JsonFormatter.new
