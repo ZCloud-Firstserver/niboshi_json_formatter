@@ -1,4 +1,4 @@
-# NiboshiLoggerJsonFormatter
+# NiboshiJsonFormatter
 
 TODO: Write a gem description
 
@@ -7,7 +7,7 @@ TODO: Write a gem description
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'niboshi_logger_json_formatter'
+gem 'niboshi_json_formatter'
 ```
 
 And then execute:
@@ -16,19 +16,19 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install niboshi_logger_json_formatter
+    $ gem install niboshi_json_formatter
 
 ## Usage
 
 Add this to your `config/environments/*` files:
 
 ```
-config.log_formatter = Niboshi::Logger::JsonFormatter.new
+config.log_formatter = Niboshi::JsonFormatter.new
 ```
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/niboshi_logger_json_formatter/fork )
+1. Fork it ( https://github.com/[my-github-username]/niboshi_json_formatter/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
