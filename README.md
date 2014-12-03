@@ -7,7 +7,7 @@ TODO: Write a gem description
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'niboshi_json_formatter'
+gem 'niboshi_json_formatter', github: "ZCloud-Firstserver/niboshi_json_formatter"
 ```
 
 And then execute:
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Add this to your `config/environments/*` files:
+Add this to your `config/environments/*.rb` files:
 
 ```
 config.log_formatter = Niboshi::JsonFormatter.new
