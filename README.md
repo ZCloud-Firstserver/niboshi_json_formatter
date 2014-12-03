@@ -1,6 +1,6 @@
 # NiboshiJsonFormatter
 
-TODO: Write a gem description
+A Ruby gem that makes your app log in JSON format. It may be useful if you ship all your logs to [ElasticSearch](http://www.elasticsearch.org/).
 
 ## Installation
 
