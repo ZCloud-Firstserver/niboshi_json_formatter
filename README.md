@@ -1,5 +1,7 @@
 # NiboshiJsonFormatter
 
+[![Circle CI](https://circleci.com/gh/ZCloud-Firstserver/niboshi_json_formatter/tree/master.svg?style=svg)](https://circleci.com/gh/ZCloud-Firstserver/niboshi_json_formatter/tree/master)
+
 TODO: Write a gem description
 
 ## Installation
