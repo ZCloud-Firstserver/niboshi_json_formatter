@@ -22,10 +22,23 @@ Or install it yourself as:
 
 ## Usage
 
+### For Rails project
+
 Add this to your `config/environments/*.rb` files:
 
 ```
 config.log_formatter = Niboshi::JsonFormatter.new
+```
+### For Logger
+
+```
+require 'json'
+require 'niboshi_json_formatter'
+@log = Logger.new(STDOUT)
+@log.formatter = Niboshi::JsonFormatter.new
+@log.info "foo bar"
+
+#=> {"time":1417595700.318135,"formatted_time":"2014-12-03 17:35:00 +0900","hostname":"macmini.local","pid":66419,"tid":70165887050860,"level":"INFO","program_name":null,"message":"foo bar"}
 ```
 
 ## Contributing
