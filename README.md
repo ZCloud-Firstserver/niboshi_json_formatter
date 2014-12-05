@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install
+    $ gem install niboshi_json_formatter
 
 ## Usage
 
