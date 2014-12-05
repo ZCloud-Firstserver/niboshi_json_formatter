@@ -7,7 +7,7 @@ A Ruby gem that makes your app log in JSON format. It may be useful if you ship 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'niboshi_json_formatter', github: "ZCloud-Firstserver/niboshi_json_formatter"
+gem 'niboshi_json_formatter'
 ```
 
 And then execute:
