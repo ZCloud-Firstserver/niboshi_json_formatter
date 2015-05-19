@@ -1,0 +1,25 @@
+---
+language: ruby
+
+gemfile:
+  - Gemfile
+  - Gemfile19-20
+
+rvm:
+  - 1.9.3
+  - 2.0
+  - 2.1
+  - 2.2
+
+script: bundle exec rspec
+
+matrix:
+  exclude:
+    - rvm: 1.9.3
+      gemfile: Gemfile
+    - rvm: 2.0
+      gemfile: Gemfile
+    - rvm: 2.1
+      gemfile: Gemfile19-20
+    - rvm: 2.2
+      gemfile: Gemfile19-20
