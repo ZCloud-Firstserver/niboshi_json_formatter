@@ -24,7 +24,7 @@ describe Niboshi::JsonFormatter do
       let(:severity) { "INFO" }
       let(:time) { Time.now }
       let(:program_name) { "RSpec" }
-      let(:message) { "あいうえお".encode("SHIFT_JIS").force_encoding("UTF-8") }
+      let(:message) { "あいうえお".encode("SHIFT_JIS", "UTF-8").force_encoding("UTF-8") }
       subject { JSON.parse(Niboshi::JsonFormatter.new.call(severity, time, program_name, message)) }
 
       it { expect(subject["time"]).not_to be_nil }
