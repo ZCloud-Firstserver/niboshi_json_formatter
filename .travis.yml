@@ -1,10 +1,23 @@
 ---
 language: ruby
+
+gemfile:
+  - Gemfile
+  - gemfiles/Gemfile19-20
+
+rvm:
+  - 1.9.3
+  - 2.0
+  - 2.1
+  - 2.2
+
 matrix:
-  rvm:
-    - "1.9.3"
+  exclude:
+    - rvm: 1.9.3
+      gemfile: Gemfile
+    - rvm: 2.0
+      gemfile: Gemfile
+    - rvm: 2.1
       gemfile: gemfiles/Gemfile19-20
-    - "2.0"
+    - rvm: 2.2
       gemfile: gemfiles/Gemfile19-20
-    - "2.1"
-    - "2.2"
