@@ -3,7 +3,7 @@ require "json"
 
 module Niboshi
   class JsonFormatter < ::Logger::Formatter
-    Version = VERSION = "0.1.0"
+    Version = VERSION = "0.1.1"
 
     def hostname
       @hostname ||= Socket.gethostname
