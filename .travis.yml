@@ -11,6 +11,8 @@ rvm:
   - 2.1
   - 2.2
 
+script: bundle exec rspec
+
 matrix:
   exclude:
     - rvm: 1.9.3
