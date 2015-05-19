@@ -14,7 +14,7 @@ module Niboshi
     end
 
     def call(severity, time, program_name, message)
-      {
+      data = {
         time: time.to_f,
         formatted_time: time,
         hostname: hostname,
@@ -23,7 +23,12 @@ module Niboshi
         level: severity,
         program_name: program_name,
         message: message
-      }.to_json + "\n"
+      }
+
+      data.to_json + "\n"
+
+    rescue JSON::GeneratorError
+      (data.each_pair {|k,v| data[k] = v.scrub("?") if v.is_a?(String) }).to_json + "\n"
     end
   end
 end
