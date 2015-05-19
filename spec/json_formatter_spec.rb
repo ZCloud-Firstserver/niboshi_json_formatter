@@ -35,7 +35,7 @@ describe Niboshi::JsonFormatter do
       it { expect(subject["level"]).to eql severity }
       it { expect(subject["program_name"]).to eql program_name }
 
-      if ENV['CI']
+      if RbConfig::CONFIG['ruby_version'] < "2.1.0"
         it { expect(subject["message"]).to eql "\x82\xA0\x82\xA2\x82\xA4\x82\xA6\x82\xA8" }
       else
         it { expect(subject["message"]).to eql "??????????" }
