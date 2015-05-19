@@ -27,15 +27,19 @@ describe Niboshi::JsonFormatter do
       let(:message) { "あいうえお".encode("SHIFT_JIS").force_encoding("UTF-8") }
       subject { JSON.parse(Niboshi::JsonFormatter.new.call(severity, time, program_name, message)) }
 
-    it { expect(subject["time"]).not_to be_nil }
-    it { expect(subject["formatted_time"]).not_to be_nil }
-    it { expect(subject["hostname"]).to eql Socket.gethostname }
-    it { expect(subject["pid"]).not_to be_nil }
-    it { expect(subject["tid"]).not_to be_nil }
-    it { expect(subject["level"]).to eql severity }
-    it { expect(subject["program_name"]).to eql program_name }
-    it { expect(subject["message"]).to eql "??????????" }
+      it { expect(subject["time"]).not_to be_nil }
+      it { expect(subject["formatted_time"]).not_to be_nil }
+      it { expect(subject["hostname"]).to eql Socket.gethostname }
+      it { expect(subject["pid"]).not_to be_nil }
+      it { expect(subject["tid"]).not_to be_nil }
+      it { expect(subject["level"]).to eql severity }
+      it { expect(subject["program_name"]).to eql program_name }
+
+      if ENV['CI']
+        it { expect(subject["message"]).to eql '\x82\xA0\x82\xA2\x82\xA4\x82\xA6\x82\xA8' }
+      else
+        it { expect(subject["message"]).to eql "??????????" }
+      end
     end
   end
-
 end
