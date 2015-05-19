@@ -36,7 +36,7 @@ describe Niboshi::JsonFormatter do
       it { expect(subject["program_name"]).to eql program_name }
 
       if ENV['CI']
-        it { expect(subject["message"]).to eql '\x82\xA0\x82\xA2\x82\xA4\x82\xA6\x82\xA8' }
+        it { expect(subject["message"]).to eql "\x82\xA0\x82\xA2\x82\xA4\x82\xA6\x82\xA8" }
       else
         it { expect(subject["message"]).to eql "??????????" }
       end
